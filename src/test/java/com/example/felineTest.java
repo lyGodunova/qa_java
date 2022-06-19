@@ -3,8 +3,17 @@ package com.example;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 public class felineTest {
     Feline feline = new Feline();
+
+    @Test
+    public void testEatMeat() throws Exception {
+        List<String> actual= feline.eatMeat();
+        List<String> expected = List.of("Животные", "Птицы", "Рыба");
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void testGetFamily() {
@@ -19,7 +28,8 @@ public class felineTest {
     }
 
     @Test
-    public void testGetKittensWithKittensCount() {
-
+    public void testGetKittensWithkittensCount() {
+        int actual = feline.getKittens(5);
+        Assert.assertEquals(5, actual);
     }
 }
