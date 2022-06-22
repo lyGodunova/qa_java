@@ -39,4 +39,20 @@ public class animalTest {
         List<String> actual= animal.getFood(animalKind);
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetFoodThrow(){
+        Exception exception = null;
+        try {
+            animal.getFood("Единорог");
+        } catch (Exception e) {
+            exception = e;
+        }
+
+        Assert.assertNotEquals(null, exception);
+
+        String actual = exception.getMessage();
+        String expected = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
+        Assert.assertEquals(expected, actual);
+    }
 }
