@@ -3,7 +3,7 @@ package com.example;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AnimalTestThrows {
+public class AnimalThrowsTest {
     Animal animal = new Animal();
     @Test
     public void testGetFoodThrow(){
