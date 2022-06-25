@@ -11,8 +11,10 @@ public class LionTestThrows {
     public void init() {
         MockitoAnnotations.initMocks(this);
     }
+
     @Mock
     Feline feline;
+
     @Test(expected = Exception.class)
     public void testThrowsVariant1() throws Exception {
         Lion lion = new Lion(feline, "Трансгендер");
