@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import java.util.List;
 
-public class catTest {
+public class CatTest {
     Feline feline = new Feline();
     Cat cat = new Cat(feline);
 

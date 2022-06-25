@@ -8,11 +8,11 @@ import org.junit.runners.Parameterized;
 import java.util.List;
 
 @RunWith(Parameterized.class)
-public class animalTest {
+public class AnimalTest {
     private final String animalKind;
     private final List<String> expected;
 
-    public animalTest (String animalKind, List<String> expected)throws Exception{
+    public AnimalTest (String animalKind, List<String> expected)throws Exception{
         this.animalKind = animalKind;
         this.expected = expected;
     }
@@ -40,19 +40,5 @@ public class animalTest {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void testGetFoodThrow(){
-        Exception exception = null;
-        try {
-            animal.getFood("Единорог");
-        } catch (Exception e) {
-            exception = e;
-        }
 
-        Assert.assertNotEquals(null, exception);
-
-        String actual = exception.getMessage();
-        String expected = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
-        Assert.assertEquals(expected, actual);
-    }
 }
